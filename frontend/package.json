@@ -1,0 +1,26 @@
+{
+  "name": "lms-frontend-simple",
+  "version": "1.0.0",
+  "description": "LMS Frontend simplificado con Vue 3 + Bootstrap",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.0",
+    "bootstrap-icons": "^1.11.0",
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.3",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "typescript": "^5.9.2",
+    "vite": "^5.0.8"
+  }
+}
