@@ -2,7 +2,7 @@
 
 Sistema de gestión de aprendizaje (LMS) desarrollado con Vue.js 3 y Node.js.
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 ### Opción 1: Script Automático (Recomendado)
 ```bash
@@ -26,12 +26,12 @@ npm install
 npm run dev
 ```
 
-## 📱 Acceso
+## Acceso
 
 - **Frontend**: http://localhost:5173
 - **Página Principal**: Se carga automáticamente en `/dashboard`
 
-## 🎯 Navegación Disponible
+## Navegación Disponible
 
 - **Dashboard** (`/dashboard`) - Página principal con resumen
 - **Cursos** (`/cursos`) - Lista de cursos disponibles
@@ -39,7 +39,7 @@ npm run dev
 - **Calificaciones** (`/calificaciones`) - Vista de calificaciones y progreso
 - **Perfil** (`/profile`) - Edición de información personal
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 ### Frontend
 - Vue.js 3
@@ -56,7 +56,7 @@ npm run dev
 - bcryptjs
 - CORS
 
-## 📋 Funcionalidades
+## Funcionalidades
 
 - ✅ **Modo Demo**: Funciona sin autenticación para demostración
 - ✅ **Dashboard**: Página principal con estadísticas y resumen
@@ -66,7 +66,7 @@ npm run dev
 - ✅ **Perfil**: Edición de información personal y cambio de contraseña
 - ✅ **Navegación**: Menú completo accesible desde cualquier página
 
-## 🔧 Desarrollo
+## Desarrollo
 
 ### Estructura del Proyecto
 ```
@@ -99,13 +99,13 @@ npm run build
 npm start
 ```
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 1. **Puerto ocupado**: Cambiar puertos en `vite.config.js` (frontend) y `server.js` (backend)
 2. **Error de CORS**: Verificar configuración en `server.js`
 3. **Dependencias**: Ejecutar `npm install` en ambos directorios
 
-## 📝 Notas
+## Notas
 
 - El backend usa una base de datos en memoria (se reinicia al reiniciar el servidor)
 - Las contraseñas están hasheadas con bcrypt

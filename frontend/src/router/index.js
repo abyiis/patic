@@ -43,12 +43,6 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
-    path: '/calificaciones',
-    name: 'Calificaciones',
-    component: () => import('../views/CalificacionesView.vue'),
-    meta: { requiresAuth: true }
-  },
-  {
     path: '/admin',
     name: 'Admin',
     component: () => import('../views/AdminView.vue'),
@@ -84,9 +78,29 @@ const router = createRouter({
   routes
 })
 
-// Guard de navegación simplificado para demo
+// Guard de navegación
 router.beforeEach(async (to, from, next) => {
-  // Permitir acceso a todas las rutas para demo
+  // Verificar autenticación
+  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+    const isAuth = await authStore.checkAuth()
+    if (!isAuth) {
+      next('/login')
+      return
+    }
+  }
+
+  // Redirigir usuarios autenticados
+  if (to.meta.requiresGuest && authStore.isAuthenticated) {
+    next('/dashboard')
+    return
+  }
+
+  // Verificar roles
+  if (to.meta.requiresRole && authStore.user?.rol !== to.meta.requiresRole) {
+    next('/dashboard')
+    return
+  }
+
   next()
 })
 
